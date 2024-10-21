@@ -1,0 +1,24 @@
+
+<h3>
+
+    <input type="text" placeholder="Nombre Producto"/>
+    <input type="number" placeholder="Precio"/>
+    <button>Agregar Producto</button>
+</h3>
+
+<ul> 
+
+    <li *ngFor= "let elemento of productos">
+        <span [ngStyle]='{"color": elemento.descuento ? "red" : "black"}'>
+
+        {{elemento.nombre}}, 
+        Precio: {{elemento.precio}},
+        Descuento: {{elemento.descuento}}
+        <span *ngIf="elemento.descuento"></span>
+
+    </span>    
+    </li>
+
+
+    
+</ul>
